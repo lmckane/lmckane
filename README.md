@@ -1,5 +1,6 @@
-### Hi there 👋
+### Hi there 👋 I'm Liam.
 
+I'm a senior at George Mason University studying Computer Engineering.
 <!--
 **lmckane/lmckane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
