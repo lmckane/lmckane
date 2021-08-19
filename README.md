@@ -1,4 +1,4 @@
-### Hi there 👋 I'm Liam.
+### Hi there 👋. I'm Liam.
 
 I'm a senior at George Mason University studying Computer Engineering.
 <!--
