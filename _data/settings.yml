@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 
-title: Avenco
+title: Liam McKane
 logo: # You can add own logo. For example '/images/logo.png'.
 description: Avenco – Creative Portfolio Theme for Jekyll
 
@@ -11,17 +11,17 @@ menu__settings:
       url: '/'
     - title: 'Projects'
       url: '/projects/'
-    - title: 'Blog'
+    - title: 'Posts'
       url: '/blog/'
-    - title: 'Pages'
-      submenu:
-      - url: '/about'
-        title: 'About'
-      - url: '/elements'
-        title: 'Elements'
+    # - title: 'Pages'
+    #   submenu:
+    - url: '/about'
+      title: 'About'
+      # - url: '/elements'
+      #   title: 'Elements'
 
 # Call to action button
-cta__button__text: Get in touch
+cta__button__text: Contact
 
 # Add global cover image (This field adds a background to the top and bottom of the site.)
 cover__image: '/images/37.jpg'
@@ -31,9 +31,9 @@ cover__image: '/images/37.jpg'
 # Author Settings
 
 author:
-  name: James Clayton
-  title: Hello I’m Liam McKane
-  bio: Art Director & Graphic Designer based in Australia, crafting beautiful and functional websites and mobile apps. When I’m not working, I’m probably listening to relaxing music or traveling somewhere.
+  name: Liam McKane
+  title: Hello, I’m Liam McKane
+  bio: Senior at George Mason University studying Computer Engineering.
   image: '/images/01.jpg'
   avatar: '/images/avatar.jpg'
   button__text: See my works
