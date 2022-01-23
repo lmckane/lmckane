@@ -11,8 +11,8 @@ menu__settings:
       url: '/'
     - title: 'Projects'
       url: '/projects/'
-    - title: 'Posts'
-      url: '/blog/'
+    # - title: 'Posts'
+    #   url: '/blog/'
     # - title: 'Pages'
     #   submenu:
     - url: '/about'
@@ -36,7 +36,7 @@ author:
   bio: Senior at George Mason University studying Computer Engineering.
   image: '/images/liam.jpg'
   avatar: '/images/avatar.jpg'
-  button__text: See my works
+  button__text: See my resume
 
 
 #-------------------------------
