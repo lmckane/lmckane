@@ -9,16 +9,19 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'Resume'
-      url: '/Resume/'
+    - title: 'About'
+      url: '/#about'
+    - title: 'Experience'
+      url: '/#experience'
     - title: 'Projects'
-      url: '/projects/'
+      url: '/#projects'
+    - title: 'Resume'
+      url: '/Resume.pdf'
         # - title: 'Posts'
     #   url: '/blog/'
     # - title: 'Pages'
   # submenu:
-    - url: '/about'
-      title: 'About Me'
+   
       # - url: '/elements'
       #   title: 'Elements'
 
@@ -38,14 +41,14 @@ author:
   bio: Senior at George Mason University studying Computer Engineering.
   image: '/images/liam.jpg'
   avatar: '/images/avatar.jpg'
-  button__text: See my resume
+  button__text: See my projects
 
 
 #-------------------------------
 # Projects Settings
 
 projects__settings:
-  projects__title: <span class="text-span">Resume</span> # Add a 'text-span' class to highlight text.
+  projects__title: My <span class="text-span">Projects</span> # Add a 'text-span' class to highlight text.
   projects__description: I shows only the best websites and portfolios built completely with passion, simplicity & creativity!
 
 

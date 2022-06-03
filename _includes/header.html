@@ -31,14 +31,18 @@
                 <span class="nav__link dropdown-toggle">{{ item.title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
                 <div class="dropdown-menu">
                   {% for submenu-item in item.submenu %}
-                    <a href="{{ submenu-item.url }}" class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
+                    <a href="{{ submenu-item.url }}"  class="nav__link{% if page.url == submenu-item.url %} active-link{% endif %}">{{submenu-item.title}}</a>
                   {% endfor %}
                 </div>
               </li>
 
               {% else %}
               <li class="nav__item">
+                {% if item.title == "Resume" %}
+                <a href="{{ item.url | relative_url }}" target="_blank" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                {% else %}
                 <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                {% endif %}
               </li>
               {% endif %}
             {% endfor %}
