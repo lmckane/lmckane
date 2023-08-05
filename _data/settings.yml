@@ -9,12 +9,12 @@ menu__settings:
   menu__items:
     - title: 'Home'
       url: '/'
-    - title: 'About'
-      url: '/#about'
-    - title: 'Experience'
-      url: '/#experience'
-    - title: 'Projects'
-      url: '/#projects'
+    - title: 'The Engineer'
+      url: '/engineer'
+    - title: 'The Artist'
+      url: '/artist'
+    - title: 'The Voice'
+      url: '/voice'
     - title: 'Resume'
       url: '/Resume.pdf'
         # - title: 'Posts'
@@ -38,10 +38,9 @@ cover__image: '/images/37.jpg'
 author:
   name: Liam McKane
   title: Hello, I’m Liam McKane
-  bio: Graduate of George Mason University with a B.S. in Computer Engineering.  Currently Employed as a Quality Engineer at Alarm.com in Tysons, VA.  I've always had 
-  innate passion for science and technology, as well as artist expression.  Whether coding this very website or creating a digital portrait, I'm always looking to diversify my skillset.
-  image: '/images/liam3.jpg'
-  avatar: '/images/avatar.jpg'
+  bio: Graduate of George Mason University with a B.S. in Computer Engineering.  Currently Employed as a Quality Engineer at Alarm.com in Tysons, VA.  I've always had innate passion for science and technology, as well as artist expression.  Whether coding this very website or creating a digital portrait, I'm always looking to diversify my skillset.
+  image: '/images/Liam1.jpg'
+  avatar: '/images/Liam1.jpg'
   button__text: See my projects
 
 
