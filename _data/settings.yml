@@ -13,8 +13,8 @@ menu__settings:
       url: '/engineer'
     - title: 'The Artist'
       url: '/artist'
-    - title: 'The Voice'
-      url: '/voice'
+    # - title: 'The Voice'
+    #   url: '/voice'
     - title: 'Resume'
       url: '/Resume.pdf'
         # - title: 'Posts'
@@ -93,7 +93,7 @@ projects__settings:
 contact__settings:
   contact__email: lmckane04@email.com # Add your email for contact form
   contact__title: <span class="text-span">Get</span> in touch # Add a title to your form
-  contact__description: Avenco comes with a built-in contact form. # Add a description to your form
+  contact__description: Let's work together! # Add a description to your form
 
 # NOTE
 # Avenco comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
@@ -124,7 +124,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 # Example of adding a new link to the footer - {icon: "ion-logo-facebook", link: "https://facebook.com"}
 # Other icons can be found at https://ionicons.com/v4/
 social:
-# - {icon: "ion-logo-twitter", link: "https://twitter.com"}
+- {icon: "ion-logo-twitter", link: "https://twitter.com/LiamJMcKane"}
 - {icon: "ion-logo-github", link: "https://github.com/lmckane"}
 # - {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
 # - {icon: "ion-logo-codepen", link: "https://codepen.io"}
