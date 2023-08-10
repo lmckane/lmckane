@@ -43,6 +43,15 @@ author:
   avatar: '/images/Liam1.jpg'
   button__text: See my projects
 
+experience:
+  microstrategy: |
+    * Created an improved developer website for MicroStrategy utilizing GitHub, markdown, HTML, CSS,JavaScript, and Eleventy.
+    * Utilized scrum workflow with a team of fellow interns and mentors.
+    * Participated in bi-weekly hackathon projects.
+  alarmcom: |
+    * As lead QE for the Skybell devices, manages software and hardware testing to drive improvements.
+    * Ensure the success of weekly software and web deployments.
+    * Responsible for executing tests, tracking defects, and following defects through the resolution process
 
 #-------------------------------
 # Projects Settings
@@ -91,7 +100,7 @@ projects__settings:
 # Contact Settings
 
 contact__settings:
-  contact__email: lmckanebuisness@email.com # Add your email for contact form
+  contact__email: me@liammckane.com # Add your email for contact form
   contact__title: <span class="text-span">Get</span> in touch # Add a title to your form
   contact__description: Let's work together! # Add a description to your form
 
@@ -126,7 +135,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 social:
 - {icon: "ion-logo-twitter", link: "https://twitter.com/LiamJMcKane"}
 - {icon: "ion-logo-github", link: "https://github.com/lmckane"}
+- {icon: "ion-logo-linkedin", link: "https://www.linkedin.com/in/liam-mckane/"}
 # - {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
 # - {icon: "ion-logo-codepen", link: "https://codepen.io"}
 # - {icon: "ion-logo-vimeo", link: "https://vimeo.com"}
-# - {icon: "ion-logo-youtube", link: "https://youtube.com"}
