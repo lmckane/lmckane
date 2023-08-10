@@ -1,13 +1,49 @@
 <!-- begin contact -->
+<head>
+  <title>Contact Form</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('ea_-WQYRmjiMpyP6j');
+      })();
+  </script>
+  <script type="text/javascript">
+      let Send;
+      function revert_text(){
+        Send.innerHTML = "Send now <i class='ion ion-ios-paper-plane'></i>"
+      }
+      window.onload = function() {
+          Send = document.getElementById("Send");
+          contact_close = document.getElementById("contact-close");
+          contact_close.addEventListener("click", revert_text);
+          form = document.getElementById('contact-form')
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm("service_2g6n78h","template_yty5uye", this)
+                  .then(function() {
+                      Send.innerHTML = "Sent!";
+                      form.reset();
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      Send.innerHTML = "Error: " + error;
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+</head>
+<body>
   <div class="contact-modal">
     <div class="container">
       <div class="row">
         <div class="col col-12">
-
-          <div class="contact-close">
+          <div class="contact-close" id="contact-close">
             <i class="ion ion-md-close"></i>
           </div>
-
           <div class="form-box">
             <div class="contact-head">
               {% if site.data.settings.contact__settings.contact__title %}
@@ -16,8 +52,26 @@
               {% if site.data.settings.contact__settings.contact__description %}
                 <p class="contact-description">{{ site.data.settings.contact__settings.contact__description }}</p>
               {% endif %}
-            </div>
-            <form class="form" action="{% if site.data.settings.contact__settings.contact__email %}https://formspree.io/{{site.contact.email}}{% else %}#{% endif %}" method="POST">
+            </div>          
+            <form class="form" id="contact-form">
+              <input type="hidden" name="contact_number" id="contact_number">
+              <div class="form__group">
+                <label class="form__label screen-reader-text" for="user_name">Name</label>
+                <input class="form__input" type="text" name="user_name" id="user_name" placeholder="Your name...">
+              </div>
+              <div class="form__group">
+                <label class="form__label screen-reader-text" for="reply_to">Email</label>
+                <input class="form__input" type="email" name="reply_to" id="reply_to" placeholder="Your email...">
+              </div>
+              <div class="form__group">
+                <label class="form__label screen-reader-text" for="message">Message</label>
+                <textarea class="form__input" type="message" name="message" id="message" rows="8" placeholder="Your message..."></textarea>
+              </div>
+              <div class="form__group form__group-button" type="submit">
+                <button class="button button--middle" type="submit" value="Send" id="Send">Send now<i class="ion ion-ios-paper-plane"></i></button>
+              </div>
+            </form>
+            <!-- <form id="contact-form">               
               <div class="form__group">
                 <label class="form__label screen-reader-text" for="form-name">Your Name</label>
                 <input class="form__input" id="form-name" type="text" name="name" placeholder="Your name..." required>
@@ -31,13 +85,13 @@
                 <textarea class="form__input" id="form-text" name="text" rows="8" placeholder="Your message..." required></textarea>
               </div>
               <div class="form__group form__group-button">
-                <button class="button button--middle" type="submit">Send now <i class="ion ion-ios-paper-plane"></i></button>
+                <button class="button button--middle" type="submit" value="Send">Send now <i class="ion ion-ios-paper-plane"></i></button>
               </div>
-            </form>
+            </form>    -->
           </div>
-
         </div>
       </div>
     </div>
   </div>
+</body>
 <!-- end contact -->

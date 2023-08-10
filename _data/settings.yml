@@ -91,7 +91,7 @@ projects__settings:
 # Contact Settings
 
 contact__settings:
-  contact__email: lmckane04@email.com # Add your email for contact form
+  contact__email: lmckanebuisness@email.com # Add your email for contact form
   contact__title: <span class="text-span">Get</span> in touch # Add a title to your form
   contact__description: Let's work together! # Add a description to your form
 
