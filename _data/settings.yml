@@ -44,15 +44,8 @@ author:
   button__text: See my projects
 
 experience:
-  microstrategy: |
-    * Created an improved developer website for MicroStrategy utilizing GitHub, markdown, HTML, CSS,JavaScript, and Eleventy.
-    * Utilized scrum workflow with a team of fellow interns and mentors.
-    * Participated in bi-weekly hackathon projects.
-  alarmcom: |
-    * As lead QE for the Skybell devices, manages software and hardware testing to drive improvements.
-    * Ensure the success of weekly software and web deployments.
-    * Responsible for executing tests, tracking defects, and following defects through the resolution process
-
+  microstrategy: 
+  alarmcom:
 #-------------------------------
 # Projects Settings
 
