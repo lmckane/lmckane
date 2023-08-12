@@ -1,8 +1,38 @@
 <style>
     ul.bullet {
         /* padding-left: 5em; */
-        margin-bottom: 0px;
+        /* margin-bottom: 0px; */
         font-size: 19px;
+    }
+    h4.date{
+        font-size: 19px;
+        font-weight: normal;
+    }
+    h4.job__title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 768px) {
+      .show-mobile {
+        display: block;
+      }
+      .hide-mobile {
+        display: none;
+      }
+      .date {
+        margin-bottom: 0px;
+        padding-top:10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    @media only screen and (min-device-width: 769px) {
+      .show-mobile {
+        display: none;
+      }
+      .hide-mobile {
+        display: block;
+      }
     }
 </style>
 <section class="section experience" id="experience">
@@ -15,10 +45,10 @@
                           <h2 class="section__title">Where I've Worked</h2>
                         </div>
                     </div>
-                    <table>
+                    <table class="hide-mobile">
                         <tr>
-                            <td><h4>MAY - AUG 2021</h4></td>
-                            <td><h4 class="job__title">Alarm.com</h4></td>
+                            <td style="width:20%"><h4 class="date">JULY 2022 - PRESENT</h4></td>
+                            <td><h4 class="job__title">Quality Engineer · Alarm.com</h4></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -29,8 +59,8 @@
                             </ul></td>
                         </tr>
                         <tr>
-                            <td><h4>JULY 2022 - PRESENT</h4></td>
-                            <td><h4 class="job__title">MicroStrategy</h4></td>
+                            <td><h4 class="date">MAY - AUG 2021</h4></td>
+                            <td><h4 class="job__title">Software Engineer Intern · MicroStrategy</h4></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -41,6 +71,22 @@
                             </ul></td>
                         </tr>
                     </table>
+                    <div class="show-mobile">
+                        <h4 class="date">JULY 2022 - PRESENT</h4>
+                        <h4 class="job__title">Quality Engineer · Alarm.com</h4>
+                        <ul class="bullet">
+                            <li>As lead QE for the Skybell devices, manages software and hardware testing to drive improvements.</li>
+                            <li>Ensure the success of weekly software and web deployments.</li>
+                            <li>Responsible for executing tests, tracking defects, and following defects through the resolution process.</li>
+                        </ul>
+                        <h4 class="date">MAY - AUG 2021</h4>
+                        <h4 class="job__title">Software Engineer Intern · MicroStrategy</h4>
+                        <ul class="bullet">
+                            <li>Created an improved developer website for MicroStrategy utilizing GitHub, markdown, HTML, CSS,JavaScript, and Eleventy.</li>
+                            <li>Utilized scrum workflow with a team of fellow interns and mentors.</li>
+                            <li>Participated in bi-weekly hackathon projects.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
