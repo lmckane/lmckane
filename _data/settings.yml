@@ -3,7 +3,7 @@
 
 title: Liam McKane
 logo: # You can add own logo. For example '/images/logo.png'.
-description: Avenco – Creative Portfolio Theme for Jekyll
+description: My Personal Portfolio
 
 menu__settings:
   menu__items:
@@ -38,7 +38,7 @@ cover__image: '/images/37.jpg'
 author:
   name: Liam McKane
   title: Hello, I’m Liam McKane
-  bio: Graduate of George Mason University with a B.S. in Computer Engineering.  Currently Employed as a Quality Engineer at Alarm.com in Tysons, VA.  I've always had innate passion for science and technology, as well as artist expression.  Whether coding this very website or creating a digital portrait, I'm always looking to diversify my skillset.
+  bio: I'm a graduate of George Mason University with a B.S. in Computer Engineering and am currently employed as a Quality Engineer at Alarm.com in Tysons, VA.  I've always had innate passion for science and technology, as well as artist expression.  Whether coding this very website or creating a digital portrait, I'm always looking to diversify my skillset.
   image: '/images/Liam1.jpg'
   avatar: '/images/Liam1.jpg'
   button__text: See my projects

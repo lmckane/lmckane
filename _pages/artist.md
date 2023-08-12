@@ -1,8 +1,8 @@
 ---
 layout: page
-title: The Hopeful Artist
+title: The <span class="text-span">Artist</span>
+card_title: The Artist
+description: A showcase of all my current artist work.
 image: 
 ---
-<div class="instagram feed">
-    <script type="text/javascript" src="https://www.juicer.io/embed/ljm-art/embed-code.js" async defer></script>
-</div>
+{% include section-artist.html %}

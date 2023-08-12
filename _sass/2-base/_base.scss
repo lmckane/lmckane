@@ -240,7 +240,7 @@ table th {
 }
 
 table tr {
-  background-color: $tr-color;
+  // background-color: $tr-color;
   transition: all .3s ease;
   &:nth-child(even) {
     background-color: transparent;
@@ -250,7 +250,11 @@ table tr {
 table td {
   padding: 10px;
   font-size: 14px;
-  border: 1px solid $text-color;
+  border: none;
+}
+
+table h4 {
+  margin-bottom: 0px;
 }
 
 .top-cover,
