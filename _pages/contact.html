@@ -3,28 +3,65 @@ layout: page
 title: Contact
 image: '/images/25.jpg'
 ---
-
+<head>
+  <title>Contact Form</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('ea_-WQYRmjiMpyP6j');
+      })();
+  </script>
+  <script type="text/javascript">
+      let Send;
+      function revert_text(){
+        Send.innerHTML = "Send now <i class='ion ion-ios-paper-plane'></i>"
+      }
+      window.onload = function() {
+          Send = document.getElementById("Send");
+          contact_close = document.getElementById("contact-close");
+          contact_close.addEventListener("click", revert_text);
+          form = document.getElementById('contact-form')
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm("service_2g6n78h","template_yty5uye", this)
+                  .then(function() {
+                      Send.innerHTML = "Sent!";
+                      form.reset();
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      Send.innerHTML = "Error: " + error;
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+</head>
 <div class="form-box">
   <div class="contact-head">
     {% if site.contact.description %}
     <p class="page-description">{{site.contact.description}}</p>
     {% endif %}
   </div>
-  <form class="form" action="https://formspree.io/f/moqoeqdo" method="POST">
+  <form class="form" id="contact-form">
+    <input type="hidden" name="contact_number" id="contact_number">
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-      <input class="form__input" id="form-name" type="text" name="name" placeholder="Name..." required>
+      <label class="form__label screen-reader-text" for="user_name">Name</label>
+      <input class="form__input" type="text" name="user_name" id="user_name" placeholder="Your name...">
     </div>
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email..." required>
+      <label class="form__label screen-reader-text" for="reply_to">Email</label>
+      <input class="form__input" type="email" name="reply_to" id="reply_to" placeholder="Your email...">
     </div>
     <div class="form__group">
-      <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Message..." required></textarea>
+      <label class="form__label screen-reader-text" for="message">Message</label>
+      <textarea class="form__input" type="message" name="message" id="message" rows="8" placeholder="Your message..."></textarea>
     </div>
-    <div class="form__group">
-      <button class="button" type="submit">Send Message</button>
+    <div class="form__group form__group-button" type="submit">
+      <button class="button button--middle" type="submit" value="Send" id="Send">Send now<i class="ion ion-ios-paper-plane"></i></button>
     </div>
   </form>
 </div>
