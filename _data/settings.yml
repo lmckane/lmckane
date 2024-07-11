@@ -16,7 +16,7 @@ menu__settings:
     # - title: 'The Voice'
     #   url: '/voice'
     - title: 'Resume'
-      url: '/Resume.pdf'
+      url: '/LiamMcKaneResume.pdf'
         # - title: 'Posts'
     #   url: '/blog/'
     # - title: 'Pages'
