@@ -1,6 +1,6 @@
 ### Hi there 👋. I'm Liam.
 
-I'm a senior at George Mason University studying Computer Engineering.
+I'm a graduate of George Mason University with a B.S. in Computer Engineering and am currently employed as a Quality Engineer at Alarm.com
 <!--
 **lmckane/lmckane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
