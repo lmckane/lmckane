@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric Animation</title>
+    <style>
+        .geometric-shape {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: rotate-and-change 4s linear infinite;
+        }
+
+        @keyframes rotate-and-change {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+                background-color: #3498db;
+            }
+            25% {
+                background-color: #e74c3c;
+            }
+            50% {
+                background-color: #2ecc71;
+            }
+            75% {
+                background-color: #f39c12;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+                background-color: #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="geometric-shape"></div>
+</body>
+</html>

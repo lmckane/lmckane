@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Geometric Network</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #00000080; }
+        canvas { display: block; border: 1px; }
+    </style>
+</head>
+<body>
+    <canvas id="networkCanvas"></canvas>
+    <script>
+        console.log("Script started");
+        const canvas = document.getElementById('networkCanvas');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let points = [];
+        const numPoints = 200;
+        const maxDistance = 100;
+        let mouse = { x: undefined, y: undefined };
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            console.log("Canvas resized:", width, height);
+        }
+
+        class Point {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = 2;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.density = (Math.random() * 30) + 1;
+                // New properties for constant movement
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            update() {
+                // Constant movement
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                // Bounce off edges
+                if (this.x < 0 || this.x > width) this.speedX *= -1;
+                if (this.y < 0 || this.y > height) this.speedY *= -1;
+
+                // Mouse repulsion
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx * dx + dy * dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = 100;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+                
+                if (distance < maxDistance) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) {
+                        dx = this.x - this.baseX;
+                        this.x -= dx/50;
+                    }
+                    if (this.y !== this.baseY) {
+                        dy = this.y - this.baseY;
+                        this.y -= dy/50;
+                    }
+                }
+
+                // Update base position
+                this.baseX += this.speedX;
+                this.baseY += this.speedY;
+
+                // Keep base position within bounds
+                if (this.baseX < 0 || this.baseX > width) {
+                    this.speedX *= -1;
+                    this.baseX += this.speedX;
+                }
+                if (this.baseY < 0 || this.baseY > height) {
+                    this.speedY *= -1;
+                    this.baseY += this.speedY;
+                }
+            }
+        }
+
+        function init() {
+            points = [];
+            for (let i = 0; i < numPoints; i++) {
+                points.push(new Point());
+            }
+            console.log("Initialization complete. Points created:", points.length);
+        }
+
+        function animate() {
+            ctx.fillStyle = 'yellow';
+            ctx.fillRect(0, 0, 100, 100);
+
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < points.length; i++) {
+                points[i].update();
+                points[i].draw();
+                for (let j = i + 1; j < points.length; j++) {
+                    let dx = points[i].x - points[j].x;
+                    let dy = points[i].y - points[j].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < maxDistance) {
+                        ctx.strokeStyle = `rgba(255,255,255,${1 - distance/maxDistance})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].x, points[i].y);
+                        ctx.lineTo(points[j].x, points[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        window.addEventListener('resize', () => {
+            resize();
+            init();
+        });
+
+        resize();
+        init();
+        console.log("Canvas dimensions:", canvas.width, canvas.height);
+        console.log("Number of points:", points.length);
+        console.log("Starting animation");
+        animate();
+    </script>
+</body>
+</html>
