@@ -7,6 +7,6 @@ image:
 ---
 {% include section-experience.html %}
 
-<!-- include section-projects.html -->
+<!-- {% include section-education.html %} -->
 
-{% include section-education.html %}
+<!-- {% include section-projects.html %} -->
