@@ -97,16 +97,13 @@ contact__settings:
   contact__title: <span class="text-span">Get</span> in touch # Add a title to your form
   contact__description: Let's work together! # Add a description to your form
 
-# NOTE
-# Avenco comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
-
 
 #-------------------------------
 # Newsletter Settings
 mailchimp__settings:
   mailchimp__title: <span class="text-span">Join</span> my mailing list # Add your title
   mailchimp__text: " 'Get inspiration, updates and', 'cool stuff about design!' " # Add descriptions to the form by wrapping the text in single quotes. If you want to use more than one sentence, be sure to separate them with a comma.
-  mailchimp__identifier: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+  mailchimp__identifier: # Add your MailChimp form identifier.
   mailchimp__button__text: Subscribe # Add your button text
 
 
