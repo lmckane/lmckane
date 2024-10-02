@@ -29,7 +29,7 @@ menu__settings:
 cta__button__text: Contact
 
 # Add global cover image (This field adds a background to the top and bottom of the site.)
-cover__image: '/images/37.jpg'
+cover__image: '/images/pastel.jpg'
 
 
 #-------------------------------

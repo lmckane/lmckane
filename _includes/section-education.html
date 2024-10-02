@@ -1,4 +1,33 @@
 <style>
+    /* Existing styles for job title */
+    .job__title {
+      font-size: 1.25rem; /* Adjust as needed */
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    /* New styles for the job link */
+    .job__link {
+      color: inherit; /* Ensures the link color matches the text */
+      text-decoration: none;
+      display: inline;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    /* Styles for the arrow SVG */
+    .job__link svg {
+      width: 1em;
+      height: 1em;
+      margin-left: 0.25em;
+      transform: translateY(0.5ex);
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for the arrow */
+    .job__link:hover svg {
+      transform: translateX(2px) translateY(-2px);
+    }
     ul.bullet {
         /* padding-left: 5em; */
         /* margin-bottom: 0px; */
@@ -51,7 +80,7 @@
                     <table class="hide-mobile">
                         <tr>
                             <td style="width:20%"><h4 class="date">AUG 2018 - MAY 2022</h4></td>
-                            <td><h4 class="job__title">George Mason University</h4><h4 class="job__title">Bachelor of Science in Computer Engineering</h4></td>
+                            <td><h4 class="job__title"><a href="https://cec.gmu.edu/" class="job__link" target="_blank">George Mason University · Bachelor of Science in Computer Engineering{% include arrow.html %}</a></h4></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -61,8 +90,8 @@
                         </tr>
                     </table>
                     <div class="show-mobile">
-                        <h4 class="date">JULY 2022 - PRESENT</h4>
-                        <h4 class="job__title">Quality Engineer · Alarm.com</h4>
+                        <h4 class="date">AUG 2018 - MAY 2022</h4>
+                        <td><h4 class="job__title">George Mason University · Bachelor of Science in Computer Engineering</h4></td>
                         <ul class="bullet">
                             <li></li>
                         </ul>

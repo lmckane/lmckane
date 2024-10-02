@@ -1,4 +1,34 @@
 <style>
+    /* Existing styles for job title */
+    .job__title {
+        font-size: 1.25rem; /* Adjust as needed */
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    /* New styles for the job link */
+    .job__link {
+        color: inherit; /* Ensures the link color matches the text */
+        text-decoration: none;
+        display: inline;
+        align-items: center;
+        transition: color 0.3s ease;
+    }
+
+    /* Styles for the arrow SVG */
+    .job__link svg {
+        width: 1em;
+        height: 1em;
+        margin-left: 0.25em;
+        transform: translateY(0.5ex);
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover effect for the arrow */
+    .job__link:hover svg {
+        transform: translateX(2px) translateY(-2px);
+    }
+
     ul.bullet {
         /* padding-left: 5em; */
         /* margin-bottom: 0px; */
@@ -51,7 +81,8 @@
                     <table class="hide-mobile">
                         <tr>
                             <td style="width:20%"><h4 class="date">JUL 2022 - PRESENT</h4></td>
-                            <td><h4 class="job__title">Quality Engineer · Alarm.com</h4></td>
+                            <td><h4 class="job__title"><a href="https://www.alarm.com" class="job__link" target="_blank">Quality Engineer · Alarm.com{% include arrow.html %}</a>
+                            </h4></td> 
                         </tr>
                         <tr>
                             <td></td>
@@ -74,22 +105,22 @@
                         </tr>
                         <tr>
                             <td><h4 class="date">MAY - AUG 2021</h4></td>
-                            <td><h4 class="job__title">Software Engineer Intern · MicroStrategy</h4></td>
+                            <td><h4 class="job__title"><a href="https://www.microstrategy.com" class="job__link" target="_blank"> Software Engineer Intern · MicroStrategy{% include arrow.html %} </a></h4></td>
                         </tr>
                         <tr>
                             <td></td>
                             <td><ul class="bullet">
-                                <li>Developed a robust developer portal using HTML, CSS, JavaScript, and static site generators such as Eleventy, Jekyll,
-                                    and DocFX, improving code documentation and user engagement.</li>
-                                <li>Collaborated in an Agile team environment utilizing Scrum methodologies to manage sprints and deliver features 
-                                    within tight timelines.</li>
+                                <li>Developed a robust developer portal using HTML, CSS, JavaScript, and static site generators such as Eleventy, Jekyll, and DocFX, improving code documentation and user engagement.</li>
+                                <li>Collaborated in an Agile team environment utilizing Scrum methodologies to manage sprints and deliver features within tight timelines.</li>
                                 <li>Participated in bi-weekly hackathons focused on data analysis and utilizing internal tools.</li>
+                                <li>Presented the final developer portal to managers, directors, VPs, and other key stakeholders, effectively communicating the project’s impact and technical details.</li>
+                                <li>Gained hands-on experience working alongside a cross-functional software engineering team, contributing to design discussions, code reviews, and daily stand-ups.</li>
                             </ul></td>
                         </tr>
                     </table>
                     <div class="show-mobile">
                         <h4 class="date">JUL 2022 - PRESENT</h4>
-                        <h4 class="job__title">Quality Engineer · Alarm.com</h4>
+                        <h4 class="job__title"><a href="https://www.alarm.com" class="job__link" target="_blank">Quality Engineer · Alarm.com{% include arrow.html %}</a></h4>
                         <ul class="bullet">
                             <li>Developed and implemented scripts in a Java testing application that integrated with company API and Android 
                                 Debug Bridge (ADB) to automate push notification latency testing for all current and future video doorbell systems.</li>
@@ -107,13 +138,13 @@
                                 updates for customer agreement terms for the video feedback feature</li> 
                         </ul>
                         <h4 class="date">MAY - AUG 2021</h4>
-                        <h4 class="job__title">Software Engineer Intern · MicroStrategy</h4>
+                        <h4 class="job__title"><a href="https://www.microstrategy.com" class="job__link" target="_blank"> Software Engineer Intern · MicroStrategy{% include arrow.html %}</a></h4>
                         <ul class="bullet">
-                            <li>Developed a robust developer portal using HTML, CSS, JavaScript, and static site generators such as Eleventy, Jekyll,
-                                and DocFX, improving code documentation and user engagement.</li>
-                            <li>Collaborated in an Agile team environment utilizing Scrum methodologies to manage sprints and deliver features 
-                                within tight timelines.</li>
+                            <li>Developed a robust developer portal using HTML, CSS, JavaScript, and static site generators such as Eleventy, Jekyll, and DocFX, improving code documentation and user engagement.</li>
+                            <li>Collaborated in an Agile team environment utilizing Scrum methodologies to manage sprints and deliver features within tight timelines.</li>
                             <li>Participated in bi-weekly hackathons focused on data analysis and utilizing internal tools.</li>
+                            <li>Presented the final developer portal to managers, directors, VPs, and other key stakeholders, effectively communicating the project’s impact and technical details.</li>
+                            <li>Gained hands-on experience working alongside a cross-functional software engineering team, contributing to design discussions, code reviews, and daily stand-ups.</li>
                         </ul>
                     </div>
                 </div>
