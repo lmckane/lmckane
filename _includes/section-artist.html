@@ -60,8 +60,35 @@
         // Additional removals can be added here
     }
 
+    function redistributePosts() {
+        const columns = [
+            document.querySelector('#j-column-0'),
+            document.querySelector('#j-column-1'),
+            document.querySelector('#j-column-2')
+        ];
+
+        if (!columns[0] || !columns[1] || !columns[2]) return;
+
+        // Collect all posts
+        const allPosts = [];
+        columns.forEach(column => {
+            const posts = Array.from(column.children);
+            allPosts.push(...posts);
+        });
+
+        // Clear existing columns
+        columns.forEach(column => column.innerHTML = '');
+
+        // Redistribute posts
+        allPosts.forEach((post, index) => {
+            const columnIndex = index % 3;
+            columns[columnIndex].appendChild(post);
+        });
+    }
+
     function modifyJuicerFeed() {
         removeUnwantedElements();
+        redistributePosts();
         // Add any other modifications here
     }
 
@@ -71,7 +98,7 @@
         } else {
             setTimeout(checkJuicerFeed, 100);
         }
-    }
+    }   
 
     // Start checking for the Juicer feed
     checkJuicerFeed();
@@ -93,5 +120,5 @@
     });
 
     // Additional safety: periodically check and remove unwanted elements
-    setInterval(removeUnwantedElements, 1000);
+    setInterval(modifyJuicerFeed, 2000);
 </script>
