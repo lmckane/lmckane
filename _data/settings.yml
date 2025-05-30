@@ -38,11 +38,10 @@ cover__image: '/images/pastel.jpg'
 author:
   name: Liam McKane
   title: Hello, I’m Liam McKane
-  bio: I’m a Quality Engineer at Alarm.com with a B.S. in Computer Engineering from George Mason University. I specialize in embedded systems, machine learning, and robotics—building intelligent systems that bridge hardware and software.
-
-Beyond engineering, I’m passionate about visual design and creative expression. Whether I’m debugging hardware, developing autonomous systems, or illustrating a digital portrait, I enjoy projects that let me merge logic with creativity.
-
-This site showcases my technical work, creative projects, and ongoing journey as a multidisciplinary engineer.
+  bio: I’m a Quality Engineer at Alarm.com with a B.S. in Computer Engineering from George Mason University. I specialize in embedded systems, machine learning, and robotics—designing intelligent technologies that bridge hardware and software. Outside of engineering, I’m passionate about visual design and creative expression, taking on projects that merge logic with creativity, from building autonomous systems to illustrating digital art, this site showcases my multidisciplinary work in engineering and design.
+  image: '/images/Liam1.jpg'
+  avatar: '/images/Liam1.jpg'
+  button__text: See my projects
 
 experience:
   microstrategy: 
