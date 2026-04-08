@@ -13,14 +13,23 @@
         display: block;
         width: 100%;
     }
-      /* Hide unwanted elements */
-    .juicer-feed h1.referral,
-    .juicer-feed .j-paginate,
-    .juicer-feed .j-meta-item.j-likes,
-    .juicer-feed .j-meta-item.j-comments,
-    .juicer-feed .j-logo,
-    .juicer-feed .j-powered-by {
+    /* Hide unwanted elements (scoped + high specificity so Juicer 2 / Tailwind utilities do not win) */
+    #art-feed .juicer-feed .juicer-ad,
+    #art-feed .juicer-feed h1.referral,
+    #art-feed .juicer-feed .j-paginate,
+    #art-feed .juicer-feed .j-meta-item.j-likes,
+    #art-feed .juicer-feed .j-meta-item.j-comments,
+    #art-feed .juicer-feed .j-logo,
+    #art-feed .juicer-feed .j-powered-by {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        pointer-events: none !important;
     }
 </style>
 
@@ -32,32 +41,39 @@
 
 <script>
     function removeUnwantedElements() {
-        // Remove elements with specific classes
+        var root = document.querySelector('#art-feed');
+        if (!root) return;
+
         var unwantedClasses = [
             'feed-item juicer image-post juicer-about',
+            'juicer-ad',
             'j-logo',
             'j-powered-by',
             'referral'
         ];
 
         unwantedClasses.forEach(function(className) {
-            var elements = document.querySelectorAll('.' + className.replace(/ /g, '.'));
-            elements.forEach(function(element) {
+            var sel = '.' + className.trim().replace(/\s+/g, '.');
+            root.querySelectorAll(sel).forEach(function(element) {
                 element.remove();
             });
         });
 
-        // Remove specific feed items
-        var feedItems = document.querySelectorAll('.feed-item');
-        feedItems.forEach(function(item) {
-            if (item.classList.contains('juicer-about') || 
-                item.classList.contains('j-logo') || 
+        root.querySelectorAll('.feed-item').forEach(function(item) {
+            if (item.classList.contains('juicer-about') ||
+                item.classList.contains('juicer-ad') ||
+                item.classList.contains('j-logo') ||
                 item.classList.contains('j-powered-by')) {
                 item.remove();
             }
         });
 
-        // Additional removals can be added here
+        /* Fallback: promo tiles if class names change (grid cells only, cheap scan) */
+        root.querySelectorAll('.juicer-feed [class*="htmx-grid"] > div').forEach(function(cell) {
+            if ((cell.textContent || '').indexOf('Aggregate your social feeds') !== -1) {
+                cell.remove();
+            }
+        });
     }
 
     function modifyJuicerFeed() {
@@ -76,22 +92,30 @@
     // Start checking for the Juicer feed
     checkJuicerFeed();
 
-    // Re-run modifications when Juicer updates the feed
-    document.addEventListener('DOMContentLoaded', function() {
-        var feedContainer = document.querySelector('.instagram-feed');
-        if (feedContainer) {
-            var observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                    if (mutation.type === 'childList') {
-                        modifyJuicerFeed();
-                    }
-                });
-            });
+    // Re-run when Juicer / HTMX swaps feed HTML (otherwise ads return after settle)
+    function attachFeedObservers() {
+        var feedContainer = document.querySelector('#art-feed .instagram-feed');
+        if (!feedContainer) return;
 
-            observer.observe(feedContainer, { childList: true, subtree: true });
-        }
-    });
+        var observer = new MutationObserver(function(mutations) {
+            for (var i = 0; i < mutations.length; i++) {
+                if (mutations[i].type === 'childList') {
+                    modifyJuicerFeed();
+                    break;
+                }
+            }
+        });
+        observer.observe(feedContainer, { childList: true, subtree: true });
+    }
 
-    // Additional safety: periodically check and remove unwanted elements
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', attachFeedObservers);
+    } else {
+        attachFeedObservers();
+    }
+
+    document.addEventListener('htmx:afterSwap', modifyJuicerFeed);
+    document.addEventListener('htmx:afterSettle', modifyJuicerFeed);
+
     setInterval(removeUnwantedElements, 1000);
 </script>
