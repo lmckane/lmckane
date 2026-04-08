@@ -58,19 +58,19 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
 @for $i from 0 through $columns {
   .col-#{$i} {
-    width: calc($i / $columns) * 100%;
+    width: calc(($i / $columns) * 100%);
   }
 }
 
 @for $i from 0 through $columns {
   .push-#{$i} {
-    margin-left: calc($i / $columns) * 100%;
+    margin-left: calc(($i / $columns) * 100%);
   }
 }
 
 @for $i from 0 through $columns {
   .pull-#{$i} {
-    margin-right: calc($i / $columns) * 100%;
+    margin-right: calc(($i / $columns) * 100%);
   }
 }
 
@@ -82,19 +82,19 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
     @for $i from 0 through $columns {
       .col-d-#{$i} {
-        width: calc($i / $columns) * 100%;
+        width: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .push-d-#{$i} {
-        margin-left: calc($i / $columns) * 100%;
+        margin-left: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-d-#{$i} {
-        margin-right: calc($i / $columns) * 100%;
+        margin-right: calc(($i / $columns) * 100%);
       }
     }
   }
@@ -105,19 +105,19 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
     @for $i from 0 through $columns {
       .col-t-#{$i} {
-        width: calc($i / $columns) * 100%;
+        width: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .push-t-#{$i} {
-        margin-left: calc($i / $columns) * 100%;
+        margin-left: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-t-#{$i} {
-        margin-right: calc($i / $columns) * 100%;
+        margin-right: calc(($i / $columns) * 100%);
       }
     }
   }
@@ -127,19 +127,19 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
     @for $i from 0 through $columns {
       .col-m-#{$i} {
-        width: calc($i / $columns) * 100%;
+        width: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .push-m-#{$i} {
-        margin-left: calc($i / $columns) * 100%;
+        margin-left: calc(($i / $columns) * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-m-#{$i} {
-        margin-right: calc($i / $columns) * 100%;
+        margin-right: calc(($i / $columns) * 100%);
       }
     }
   }
