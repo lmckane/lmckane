@@ -1,6 +1,8 @@
 ### Hi there 👋. I'm Liam.
 
-I'm a graduate of George Mason University with a B.S. in Computer Engineering and am currently employed as a Quality Engineer at Alarm.com
+- 🔭 I'm a graduate of George Mason University with a B.S. in Computer Engineering and am currently pursuing an M.S. in Computer Science at Johns Hopkins University. 
+- 🌱 Employed as a Quality Engineer II at Alarm.com
+- 📫 How to reach me: lmckane2@jhu.edu
 <!--
 **lmckane/lmckane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
