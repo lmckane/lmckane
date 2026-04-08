@@ -38,9 +38,14 @@ cover__image: '/images/pastel.jpg'
 author:
   name: Liam McKane
   title: Hello, I’m Liam McKane
-  bio: I’m a Quality Engineer at Alarm.com with a B.S. in Computer Engineering from George Mason University. I specialize in embedded systems, machine learning, and robotics—designing intelligent technologies that bridge hardware and software. Outside of engineering, I’m passionate about visual design and creative expression, taking on projects that merge logic with creativity, from building autonomous systems to illustrating digital art, this site showcases my multidisciplinary work in engineering and design.
-  image: '/images/Liam3.jpg'
-  avatar: '/images/Liam3.jpg'
+  bio: >
+   I’m a Quality Engineer II at Alarm.com with a B.S. in Computer Engineering from George Mason University 
+   and currently pursuing a Master's in Computer Science at Johns Hopkins University. My work focuses on 
+   embedded systems and intelligent devices, exploring how machine learning and software interact with real-world hardware.
+   This site showcases my projects in machine learning, robotics, and embedded systems, along with a collection
+   of my visual design and illustration work.
+  image: '/images/Liam4.png'
+  avatar: '/images/Liam4.png'
   button__text: See my projects
 
 experience:
@@ -123,7 +128,7 @@ google-analytics: # Add your identifier. For example UA-99631805-1.
 # Example of adding a new link to the footer - {icon: "ion-logo-facebook", link: "https://facebook.com"}
 # Other icons can be found at https://ionicons.com/v4/
 social:
-- {icon: "ion-logo-twitter", link: "https://twitter.com/LiamJMcKane"}
+# - {icon: "ion-logo-twitter", link: "https://twitter.com/LiamJMcKane"}
 - {icon: "ion-logo-github", link: "https://github.com/lmckane"}
 - {icon: "ion-logo-linkedin", link: "https://www.linkedin.com/in/liam-mckane/"}
 # - {icon: "ion-logo-pinterest", link: "https://pinterest.com"}
