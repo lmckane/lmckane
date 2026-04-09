@@ -56,7 +56,7 @@ experience:
 
 projects__settings:
   projects__title: My <span class="text-span">Projects</span> # Add a 'text-span' class to highlight text.
-  projects__description: A showcase of my class and personal projects.
+  projects__description: A showcase of my academic and personal projects.
 
 
 #-------------------------------
@@ -70,22 +70,6 @@ projects__settings:
 #     designation : "Traveler"
 #     content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
 
-#   - name: "Ann Philips"
-#     image: "/images/client-2.jpg"
-#     designation : "Designer"
-#     content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
-
-#   - name: "Roger Bergson"
-#     image: "/images/client-3.jpg"
-#     designation : "CEO, Founder"
-#     content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
-
-#   - name: "Julie Arnold"
-#     image: "/images/client-4.jpg"
-#     designation : "Full stack developer"
-#     content : "Quamquam id quidem, infinitum est in hac urbe, Ita multo sanguine profuso in laetitia et in victoria est mortuus. Atqui pugnantibus et contrariis consiliisque."
-
-
 #-------------------------------
 # Blog Section
 
@@ -98,7 +82,7 @@ projects__settings:
 # Contact Settings
 
 contact__settings:
-  contact__email: me@liammckane.com # Add your email for contact form
+  contact__email: ljpmckane@gmail.com # Add your email for contact form
   contact__title: <span class="text-span">Get</span> in touch # Add a title to your form
   contact__description: Let's work together! # Add a description to your form
 

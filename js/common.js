@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
   ======================= */
   var body = document.querySelector("body"),
   contactBox = document.querySelector(".contact-modal"),
-  contactOpenButton = document.querySelector(".cta-button"),
+  contactOpenButtons = document.querySelectorAll(".cta-button, .project__contact-link"),
   contactCloseButton = document.querySelector(".contact-close"),
   menuOpenIcon = document.querySelector(".nav__icon-menu"),
   menuCloseIcon = document.querySelector(".nav__icon-close"),
@@ -20,10 +20,12 @@ window.addEventListener("load", function(){
     menuClose();
   });
 
-  contactOpenButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    contactOpen();
-  });
+  for (var c = 0; c < contactOpenButtons.length; c++) {
+    contactOpenButtons[c].addEventListener("click", (e) => {
+      e.preventDefault();
+      contactOpen();
+    });
+  }
 
   contactCloseButton.addEventListener("click", (e) => {
     contactClose();

@@ -1,0 +1,31 @@
+<script>
+(function () {
+  var blocks = document.querySelectorAll('pre code.language-mermaid');
+  if (!blocks.length) return;
+
+  var style = document.createElement('style');
+  /* Project pages: full container width so LR flowcharts match editor preview (was 32rem → Dagre stacks vertically when squeezed). Posts/pages keep a readable column. */
+  style.textContent = '.mermaid { margin: 1.25em 0; overflow-x: auto; text-align: center; } .page__content .mermaid, .post__content .mermaid { max-width: 32rem; margin-left: auto; margin-right: auto; } .page__content .mermaid svg, .post__content .mermaid svg { max-width: 100%; height: auto; } .project-content .mermaid { max-width: 100%; margin-left: auto; margin-right: auto; } .project-content .mermaid svg { max-width: 100%; height: auto; }';
+  document.head.appendChild(style);
+
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js';
+  script.onload = function () {
+    for (var i = 0; i < blocks.length; i++) {
+      var code = blocks[i];
+      var pre = code.parentElement;
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = code.textContent.trim();
+      pre.parentNode.replaceChild(div, pre);
+    }
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'neutral',
+      flowchart: { useMaxWidth: true, htmlLabels: true }
+    });
+    mermaid.run().catch(function (e) { console.error('Mermaid:', e); });
+  };
+  document.body.appendChild(script);
+})();
+</script>

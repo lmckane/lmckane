@@ -25,7 +25,7 @@ layout: default
     {{ content }}
   </div>
   
-  {% if page.previous.url %}
+  {% if page.collection and page.collection.label == "projects" and page.previous.url %}
   <div class="project__navigation">
     <a class="project__prev" href="{{page.previous.url}}">
       <div class="project__box">

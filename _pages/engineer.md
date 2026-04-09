@@ -5,8 +5,8 @@ card_title: The Engineer
 # description: 
 image: 
 ---
-<!-- {% include section-projects.html %} -->
-
 {% include section-experience.html %}
 
 {% include section-education.html %}
+
+{% include section-projects.html %}
