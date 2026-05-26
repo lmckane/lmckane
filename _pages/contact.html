@@ -3,6 +3,9 @@ layout: page
 title: Contact
 image: '/images/25.jpg'
 ---
+<!-- EmailJS disabled (bot spam). To re-enable: uncomment EMAILJS sections below and remove the mailto fallback. -->
+
+<!--
 <head>
   <title>Contact Form</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -40,12 +43,25 @@ image: '/images/25.jpg'
       }
   </script>
 </head>
+-->
+
 <div class="form-box">
   <div class="contact-head">
-    {% if site.contact.description %}
-    <p class="page-description">{{site.contact.description}}</p>
+    {% if site.data.settings.contact__settings.contact__title %}
+      <h2 class="contact-title">{{ site.data.settings.contact__settings.contact__title }}</h2>
+    {% endif %}
+    {% if site.data.settings.contact__settings.contact__description %}
+      <p class="contact-description">{{ site.data.settings.contact__settings.contact__description }}</p>
     {% endif %}
   </div>
+
+  {% assign contact_email = site.data.settings.contact__settings.contact__email %}
+  <p class="contact-description">Send me an email directly:</p>
+  {% if contact_email %}
+    <a class="button button--middle" href="mailto:{{ contact_email }}">Email me<i class="ion ion-ios-mail"></i></a>
+  {% endif %}
+
+  <!-- EMAILJS: contact form
   <form class="form" id="contact-form">
     <input type="hidden" name="contact_number" id="contact_number">
     <div class="form__group">
@@ -64,4 +80,6 @@ image: '/images/25.jpg'
       <button class="button button--middle" type="submit" value="Send" id="Send">Send now<i class="ion ion-ios-paper-plane"></i></button>
     </div>
   </form>
+  -->
+
 </div>

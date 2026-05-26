@@ -1,4 +1,7 @@
 <!-- begin contact -->
+<!-- EmailJS disabled (bot spam). To re-enable: uncomment EMAILJS sections below and remove the mailto fallback. -->
+
+<!--
 <head>
   <title>Contact Form</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -37,61 +40,59 @@
   </script>
 </head>
 <body>
-  <div class="contact-modal">
-    <div class="container">
-      <div class="row">
-        <div class="col col-12">
-          <div class="contact-close" id="contact-close">
-            <i class="ion ion-md-close"></i>
+-->
+
+<div class="contact-modal">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contact-close" id="contact-close">
+          <i class="ion ion-md-close"></i>
+        </div>
+        <div class="form-box">
+          <div class="contact-head">
+            {% if site.data.settings.contact__settings.contact__title %}
+              <h2 class="contact-title">{{ site.data.settings.contact__settings.contact__title }}</h2>
+            {% endif %}
+            {% if site.data.settings.contact__settings.contact__description %}
+              <p class="contact-description">{{ site.data.settings.contact__settings.contact__description }}</p>
+            {% endif %}
           </div>
-          <div class="form-box">
-            <div class="contact-head">
-              {% if site.data.settings.contact__settings.contact__title %}
-                <h2 class="contact-title">{{ site.data.settings.contact__settings.contact__title }}</h2>
-              {% endif %}
-              {% if site.data.settings.contact__settings.contact__description %}
-                <p class="contact-description">{{ site.data.settings.contact__settings.contact__description }}</p>
-              {% endif %}
-            </div>          
-            <form class="form" id="contact-form">
-              <input type="hidden" name="contact_number" id="contact_number">
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="user_name">Name</label>
-                <input class="form__input" type="text" name="user_name" id="user_name" placeholder="Your name...">
-              </div>
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="reply_to">Email</label>
-                <input class="form__input" type="email" name="reply_to" id="reply_to" placeholder="Your email...">
-              </div>
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="message">Message</label>
-                <textarea class="form__input" type="message" name="message" id="message" rows="8" placeholder="Your message..."></textarea>
-              </div>
-              <div class="form__group form__group-button" type="submit">
-                <button class="button button--middle" type="submit" value="Send" id="Send">Send now<i class="ion ion-ios-paper-plane"></i></button>
-              </div>
-            </form>
-            <!-- <form id="contact-form">               
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-                <input class="form__input" id="form-name" type="text" name="name" placeholder="Your name..." required>
-              </div>
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-                <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Your email..." required>
-              </div>
-              <div class="form__group">
-                <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-                <textarea class="form__input" id="form-text" name="text" rows="8" placeholder="Your message..." required></textarea>
-              </div>
-              <div class="form__group form__group-button">
-                <button class="button button--middle" type="submit" value="Send">Send now <i class="ion ion-ios-paper-plane"></i></button>
-              </div>
-            </form>    -->
-          </div>
+
+          {% assign contact_email = site.data.settings.contact__settings.contact__email %}
+          <p class="contact-description">Send me an email directly:</p>
+          {% if contact_email %}
+            <a class="button button--middle" href="mailto:{{ contact_email }}">Email me<i class="ion ion-ios-mail"></i></a>
+          {% endif %}
+
+          <!-- EMAILJS: contact form
+          <form class="form" id="contact-form">
+            <input type="hidden" name="contact_number" id="contact_number">
+            <div class="form__group">
+              <label class="form__label screen-reader-text" for="user_name">Name</label>
+              <input class="form__input" type="text" name="user_name" id="user_name" placeholder="Your name...">
+            </div>
+            <div class="form__group">
+              <label class="form__label screen-reader-text" for="reply_to">Email</label>
+              <input class="form__input" type="email" name="reply_to" id="reply_to" placeholder="Your email...">
+            </div>
+            <div class="form__group">
+              <label class="form__label screen-reader-text" for="message">Message</label>
+              <textarea class="form__input" type="message" name="message" id="message" rows="8" placeholder="Your message..."></textarea>
+            </div>
+            <div class="form__group form__group-button" type="submit">
+              <button class="button button--middle" type="submit" value="Send" id="Send">Send now<i class="ion ion-ios-paper-plane"></i></button>
+            </div>
+          </form>
+          -->
+
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!--
 </body>
+-->
 <!-- end contact -->
