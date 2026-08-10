@@ -39,11 +39,10 @@ author:
   name: Liam McKane
   title: Hello, I’m Liam McKane
   bio: >
-   I’m a Quality Engineer II at Alarm.com with a B.S. in Computer Engineering from George Mason University 
-   and currently pursuing a M.S. in Computer Science at Johns Hopkins University. My work focuses on 
-   embedded systems and intelligent devices, exploring how machine learning and software interact with real-world hardware.
-   This site showcases my projects in machine learning, robotics, and embedded systems, along with a collection
-   of my visual design and illustration work.
+   I'm an Embedded Software Engineer at Riverside Research with a passion for building software that bridges the gap between hardware and intelligent systems. 
+   I earned my B.S. in Computer Engineering from George Mason University and am currently pursuing an M.S. in Computer Science at Johns Hopkins University. 
+   My interests include embedded systems, Android, Linux, machine learning, robotics, and software engineering. This site is a collection of the projects I've 
+   built, the technologies I've explored, and the artwork I've created along the way.
   image: '/images/Liam4.png'
   avatar: '/images/Liam4.png'
   button__text: See my projects
