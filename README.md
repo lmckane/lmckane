@@ -1,7 +1,7 @@
 ### Hi there 👋. I'm Liam.
 
 - 🔭 I'm a graduate of George Mason University with a B.S. in Computer Engineering and am currently pursuing an M.S. in Computer Science at Johns Hopkins University. 
-- 🌱 Employed as an Embedded Android Software Engineer at Alarm.com
+- 🌱 Employed as an Embedded Android Software Engineer at Riverside Research
 - 📫 How to reach me: lmckane2@jhu.edu
 <!--
 **lmckane/lmckane** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
