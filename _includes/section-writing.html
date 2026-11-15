@@ -1,0 +1,32 @@
+<!-- begin writing -->
+<section class="section writing">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+
+        <div class="section__info">
+          <div class="section__head">
+            <h2 class="section__title">{{ site.data.settings.writing__settings.writing__title }}</h2>
+            <a class="section__link" href="{{ '/writing' | relative_url }}">View all <i class="ion ion-md-arrow-forward"></i></a>
+          </div>
+          {% if site.data.settings.writing__settings.writing__description %}
+            <p class="section__description">{{ site.data.settings.writing__settings.writing__description }}</p>
+          {% endif %}
+        </div>
+
+          <div class="row">
+            {% assign writing_posts = site.tags.poetry %}
+            {% if writing_posts.size > 0 %}
+              {% for post in writing_posts limit:3 %}
+                {% include article-content.html %}
+              {% endfor %}
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end writing -->

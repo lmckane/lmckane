@@ -6,3 +6,4 @@ description: A showcase of all my current artwork.
 image: 
 ---
 {% include section-artist.html %}
+{% include section-writing.html %}

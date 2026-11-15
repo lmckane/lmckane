@@ -76,6 +76,13 @@ projects__settings:
 #   blog__title: Recent <span class="text-span">Blog</span> Posts # Add a 'text-span' class to highlight text.
 #   blog__description:
 
+#-------------------------------
+# Writing Section
+
+writing__settings:
+  writing__title: My <span class="text-span">Writing</span> # Add a 'text-span' class to highlight text.
+  writing__description: Poems and other writing.
+
 
 #-------------------------------
 # Contact Settings
