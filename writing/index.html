@@ -1,0 +1,30 @@
+---
+layout: default
+title: Writing
+description: Poems and other writing.
+---
+<div class="container">
+  <div class="row">
+    <div class="col col-8 push-2 col-t-12 push-t-0">
+      <div class="page-head">
+        <h1 class="page-title">{% if page.title %}{{ page.title }}{% else %}{{ site.data.settings.writing__settings.writing__title }}{% endif %}</h1>
+        {% if page.description %}
+          <p class="page-description">{{ page.description }}</p>
+        {% else site.data.settings.writing__settings.writing__description %}
+          <p class="page-description">{{ site.data.settings.writing__settings.writing__description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container animate">
+  <div class="row">
+    {% assign writing_posts = site.tags.poetry %}
+    {% if writing_posts.size > 0 %}
+      {% for post in writing_posts %}
+        {% include article-content.html %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
