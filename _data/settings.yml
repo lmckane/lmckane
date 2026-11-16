@@ -77,6 +77,12 @@ projects__settings:
 #   blog__description:
 
 #-------------------------------
+# Artist Section
+
+artist__settings:
+  artist__title: My <span class="text-span">Artwork</span> # Add a 'text-span' class to highlight text.
+
+#-------------------------------
 # Writing Section
 
 writing__settings:
